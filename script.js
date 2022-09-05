@@ -6,7 +6,7 @@ const DomElement = function(valueSelector, valueHeight, valueWidth, valueBg, val
     this.width = valueWidth + 'px';
     this.bg = valueBg;
     this.fontSize = valueFontSize + 'px';
-    this.addHTML = function(str){
+    this.addElem = function(str){
         if(this.selector[0] === '.'){
             let div = document.createElement('div');
             let selectorCopy =this.selector.slice(1);
@@ -29,7 +29,7 @@ const DomElement = function(valueSelector, valueHeight, valueWidth, valueBg, val
     }
 }
 let text = prompt('text');
-let newElement1 = new DomElement('#block', 500, 500, 'blue', 150);
-newElement1.addHTML(text);
-let newElement2 = new DomElement('.block', 10, 8, 'blue', 17);
-newElement2.addHTML(text);
+let newElement1 = new DomElement('#block', 200, 200, 'pink', 52);
+newElement1.addElem(text);
+let newElement2 = new DomElement('.block', 10, 12, 'pink', 17);
+newElement2.addElem(text);
